@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VisionX | Real-Time AI Object Detection</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="dark-theme">
+    <div class="app-container">
+        <header>
+            <div class="logo">
+                <span class="vision">Vision</span><span class="x">X</span>
+            </div>
+            <div class="system-status">
+                <span id="status-indicator" class="status-offline"></span>
+                <span id="status-text">Backend Connecting...</span>
+            </div>
+        </header>
+
+        <main>
+            <div class="camera-section">
+                <div class="video-container">
+                    <video id="webcam" autoplay muted></video>
+                    <canvas id="detection-canvas"></canvas>
+                    <div id="loading-overlay" class="hidden">
+                        <div class="loader"></div>
+                        <p>Initializing AI Model...</p>
+                    </div>
+                </div>
+
+                <div class="controls-panel">
+                    <div class="stats-row">
+                        <div class="stat-card">
+                            <span class="stat-label">FPS</span>
+                            <span id="fps-counter" class="stat-value">0</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-label">Objects</span>
+                            <span id="object-count" class="stat-value">0</span>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label for="threshold-slider">Confidence Threshold: <span id="threshold-val">50%</span></label>
+                        <input type="range" id="threshold-slider" min="10" max="95" value="50" step="5"
+                            aria-label="Confidence Threshold">
+                    </div>
+
+                    <div class="button-row">
+                        <button id="start-btn" class="primary-btn">Start Camera</button>
+                        <button id="stop-btn" class="secondary-btn hidden">Stop Camera</button>
+                        <button id="capture-btn" class="ghost-btn">Screenshot</button>
+                    </div>
+
+                    <div class="toggle-group">
+                        <label class="switch">
+                            <input type="checkbox" id="detection-toggle" checked aria-label="Enable Detection">
+                            <span class="slider round"></span>
+                        </label>
+                        <span>Enable Detection</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="detection-list-section">
+                <h3>Live Detections</h3>
+                <div id="detection-log" class="detection-log">
+                    <!-- Dynamic updates here -->
+                    <div class="placeholder-text">Camera inactive. Start to see detections.</div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p><a href="https://www.instagram.com/krishanth.ai" target="_blank" rel="noopener noreferrer"
+                    id="creator-link">VisionX &copy; 2026 | Powered by Krishanth</a></p>
+        </footer>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+
+</html>

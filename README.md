@@ -47,7 +47,7 @@ graph LR
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/VisionX.git
+git clone https://github.com/krishanth7/visionx-ai.git
 cd VisionX
 ```
 
@@ -58,7 +58,7 @@ pip install -r requirements.txt
 
 ### 3. Run the Backend
 ```bash
-python -m backend.app
+python -m backend
 ```
 *The server will start at `http://localhost:8000`*
 
@@ -93,4 +93,4 @@ VisionX/
 Distributed under the MIT License. See `LICENSE` for more information.
 
 ---
-**VisionX** was crafted with ❤️ by an AI Engineer.
+**VisionX** was crafted with ❤️ by **[Krishanth](https://www.instagram.com/krishanth.ai)**.

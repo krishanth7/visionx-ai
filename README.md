@@ -2,7 +2,7 @@
 
 VisionX is a high-performance, professional-grade real-time object detection web application. Built with **FastAPI** on the backend and **Vanilla JavaScript** on the frontend, it leverages **TensorFlow** pre-trained models to detect, label, and track objects from a live webcam feed with low latency.
 
-![VisionX Demo](screenshots/demo_placeholder.png)
+
 
 ## 🌟 Key Features
 
@@ -81,12 +81,7 @@ VisionX/
 └── requirements.txt     # Python dependencies
 ```
 
-## 🔮 Future Improvements
 
-- [ ] **Multi-Model Support**: Add a dropdown to switch between YOLOv8, EfficientDet, and Faster R-CNN.
-- [ ] **Batch Processing**: Support for video file uploads and batch frame analysis.
-- [ ] **Cloud Integration**: AWS Lambda/GCP Cloud Run deployment wrappers.
-- [ ] **PWA Support**: Make VisionX an installable Progressive Web App for mobile usage.
 
 ## 📜 License
 
